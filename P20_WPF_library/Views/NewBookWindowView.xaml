@@ -1,0 +1,52 @@
+﻿<Window x:Class="P20_WPF_library.Views.NewBookWindowView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:P20_WPF_library.Views"
+        mc:Ignorable="d"
+        Title="New Book" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Vertical">
+            <StackPanel Margin="5" Orientation="Horizontal">
+                <Label Width="70" Content="Title"/>
+                <TextBox Width="200" Text="{Binding book.Title}"/>
+            </StackPanel>
+            <StackPanel Margin="5" Orientation="Horizontal">
+                <Label Width="70" Content="Author"/>
+                <TextBox Width="200" Text="{Binding book.Author}"/>
+            </StackPanel>
+            <StackPanel Margin="5" Orientation="Horizontal">
+                <Label Width="70" Content="Year"/>
+                <TextBox Width="200" Text="{Binding book.Year}"/>
+            </StackPanel>
+            <StackPanel Margin="5" Orientation="Horizontal">
+                <Label Width="70" Content="Publisher"/>
+                <TextBox Width="200" Text="{Binding book.Publisher}"/>
+            </StackPanel>
+            <StackPanel Margin="5" Orientation="Horizontal">
+                <Label Width="70" Content="Genre"/>
+                <TextBox Width="200" Text="{Binding book.Genre}"/>
+            </StackPanel>
+            <StackPanel Margin="5" Orientation="Horizontal">
+                <Label Width="70" Content="Description"/>
+                <TextBox Width="200" Text="{Binding book.Description}"/>
+            </StackPanel>
+            <StackPanel Margin="5" Orientation="Horizontal">
+                <Label Width="70" Content="Borrower"/>
+                <TextBox Width="200" Text="{Binding book.Borrower}"/>
+            </StackPanel>
+        </StackPanel>
+        <Grid Grid.Row="1" HorizontalAlignment="Stretch">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0"  Margin="5" Content="NEW" Command="{Binding CreateBookCommand}"></Button>
+        </Grid>
+    </Grid>
+</Window>
